@@ -1,0 +1,42 @@
+<!-- <div class="row">
+    <div class="col">col</div>
+    <div class="col">col</div>
+    <div class="col">col</div>
+    <div class="col">col</div>
+  </div>
+<h4>Date :: {{todayDate}}</h4>
+<p>
+ <b>my-component works!</b> 
+ <a *ngFor="let i of fruits" class="dropdown-item" href="#">{{i}}</a>
+</p> -->
+<div class="row">
+    <div *ngFor="let title of fruits; let index = index" class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://picsum.photos/200/200?random" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" (click)="btnClick($event)" class="btn btn-primary">Click Here {{index+1}}</a>
+        </div>
+      </div>
+</div>
+<!-- <ul>
+  <li *ngFor="let user of usersList">{{user.name}}</li>
+</ul> -->
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of usersList">
+      <th scope="row">{{user.id}}</th>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.username}}</td>
+    </tr>
+  </tbody>
+</table>
